@@ -1,0 +1,41 @@
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109A10090400100000000F01FEC\Usage\OutlookMAPI2Intl_1033
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data\418A073AA3BC3475
+HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-1782144875-2244134600-1088407481-500\\Device\HarddiskVolume3\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\AutoProvisioning\ActiveUserId
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\AutoProvisioning\LastFetchDetail
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\AutoProvisioning\ManualTakStatus
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesLastModified\excel.exe_queried
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\4
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\4
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ULSMonitor\ULSAllCategories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ULSMonitor\ULSCategoriesSeverities
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ULSMonitor\ULSTagIds0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\excel.exe\ULSMonitor\ULSTagIds1
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\LanguageResources\EnabledEditingLanguages\en-US
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastSyncTimeExcel
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastWriteTimeExcel
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\SessionId
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\DocumentTemplateCache\en-US{C50A90C9-CA81-4BF6-A571-FAC1A411844E}\UpdateInProgress
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\ExcelPreviousSessionId
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\ExcelWorkbookOpenedCount
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\ImmersiveWorkbookDirtySentinel
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\Resiliency\StartupItems\%/7
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Excel\Resiliency\StartupItems\}37
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Logging\(Default)
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\00036604
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\01023e01
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Search\Catalog\C:\Users\administrator\AppData\Local\Microsoft\Outlook\larescloud@lareslabs.cloud.ost
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\ClientTelemetry\Sampling\1
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\CrashPersistence\EXCEL\9488\0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\EXCEL\9488\0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.xls\OpenWithProgids\Excel.Sheet.8
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.xlsm\OpenWithProgids\Excel.SheetMacroEnabled.12
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Content\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Cookies\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\History\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet

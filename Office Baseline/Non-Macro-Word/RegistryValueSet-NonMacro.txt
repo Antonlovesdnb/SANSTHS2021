@@ -1,0 +1,50 @@
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109A10090400100000000F01FEC\Usage\OutlookMAPI2Intl_1033
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F00000000100000000F01FEC\Usage\ProductFiles
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F00000000100000000F01FEC\Usage\VBAFiles
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F10090400100000000F01FEC\Usage\SpellingAndGrammarFiles_1033
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F100A0C00100000000F01FEC\Usage\SpellingAndGrammarFiles_3082
+HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F100C0400100000000F01FEC\Usage\SpellingAndGrammarFiles_1036
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data\418A073AA3BC3475
+HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-1782144875-2244134600-1088407481-500\\Device\HarddiskVolume3\Program Files\Microsoft Office\root\Office16\WINWORD.EXE
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\4
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{A1B69D49-2195-4F59-9D33-BDF30C0FE473}\2
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{A1B69D49-2195-4F59-9D33-BDF30C0FE473}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{BB00E856-A12F-4AB7-B2C8-4E80CAEA5B07}\5
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{BB00E856-A12F-4AB7-B2C8-4E80CAEA5B07}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{DAF0B914-9C1C-450A-81B2-FEA7244F6FFA}\5
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{DAF0B914-9C1C-450A-81B2-FEA7244F6FFA}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\4
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\Categories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSAllCategories
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSCategoriesSeverities
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSTagIds0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSTagIds1
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\LanguageResources\EnabledEditingLanguages\en-US
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\LastWrite
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\Settings\1065\{00000000-0000-0000-0000-000000000000}\Knowledge
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\Settings\1065\{00000000-0000-0000-0000-000000000000}\Placeholder
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastSyncTimeWord
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastWriteTimeWord
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\SessionId
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Toolbars\Settings\Microsoft Word
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Logging\(Default)
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\00036604
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\01023e01
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Search\Catalog\C:\Users\administrator\AppData\Local\Microsoft\Outlook\larescloud@lareslabs.cloud.ost
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Data\Settings
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\DocumentTemplateCache\en-US{6C9A153E-469A-4C60-AC61-6DD1F79D06AD}\UpdateInProgress
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\' `
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\4~`
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\; `
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\ClientTelemetry\Sampling\0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\CrashPersistence\WINWORD\2884\0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\WINWORD\2884\0
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.doc\OpenWithProgids\Word.Document.8
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Content\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Cookies\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\History\CachePrefix
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet

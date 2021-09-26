@@ -1,0 +1,2 @@
+C:\Windows\Explorer.EXE
+C:\Windows\system32\mmc.exe

@@ -1,0 +1,10 @@
+can01.dataservice.protection.outlook.com
+dataservice.protection.outlook.com
+nexusrules.officeapps.live.com
+ocws.officeapps.live.com
+outlook.office365.com
+roaming.officeapps.live.com
+self.events.data.microsoft.com
+substrate.office.com
+support.content.office.net
+uci.cdn.office.net

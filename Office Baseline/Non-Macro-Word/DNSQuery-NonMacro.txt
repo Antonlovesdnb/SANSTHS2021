@@ -1,0 +1,10 @@
+augloop.office.com
+can01.dataservice.protection.outlook.com
+dataservice.protection.outlook.com
+nleditor.osi.office.net
+ocws.officeapps.live.com
+outlook.office365.com
+roaming.officeapps.live.com
+self.events.data.microsoft.com
+substrate.office.com
+uci.cdn.office.net

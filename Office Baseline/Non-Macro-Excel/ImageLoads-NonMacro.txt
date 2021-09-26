@@ -1,0 +1,180 @@
+C:\Program Files\Common Files\microsoft shared\ClickToRun\AppvIsvSubsystems64.dll
+C:\Program Files\Common Files\microsoft shared\ClickToRun\C2R64.dll
+C:\Program Files\Microsoft Office\root\Office16\1033\MAPIR.DLL
+C:\Program Files\Microsoft Office\root\Office16\CONTAB32.DLL
+C:\Program Files\Microsoft Office\root\Office16\EMSMDB32.DLL
+C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
+C:\Program Files\Microsoft Office\root\Office16\GFX.DLL
+C:\Program Files\Microsoft Office\root\Office16\MSOARIA.DLL
+C:\Program Files\Microsoft Office\root\Office16\MSPST32.DLL
+C:\Program Files\Microsoft Office\root\Office16\Microsoft.Office.PolicyTips.dll
+C:\Program Files\Microsoft Office\root\Office16\OART.DLL
+C:\Program Files\Microsoft Office\root\Office16\OLMAPI32.DLL
+C:\Program Files\Microsoft Office\root\Office16\OutlookServicing.DLL
+C:\Program Files\Microsoft Office\root\Office16\msvcp140.dll
+C:\Program Files\Microsoft Office\root\Office16\vcruntime140.dll
+C:\Program Files\Microsoft Office\root\Office16\vcruntime140_1.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\MSO.DLL
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\MSPTLS.DLL
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso20win32client.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso30win32client.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso40UIwin32client.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso50win32client.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso98win32client.dll
+C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\RICHED20.DLL
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2107.4-0\MpOAV.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll
+C:\Windows\System32\AppResolver.dll
+C:\Windows\System32\BCP47Langs.dll
+C:\Windows\System32\BCP47mrm.dll
+C:\Windows\System32\CoreMessaging.dll
+C:\Windows\System32\CoreUIComponents.dll
+C:\Windows\System32\DWrite.dll
+C:\Windows\System32\DXCore.dll
+C:\Windows\System32\DataExchange.dll
+C:\Windows\System32\FWPUCLNT.DLL
+C:\Windows\System32\HvsiManagementApi.dll
+C:\Windows\System32\IPHLPAPI.DLL
+C:\Windows\System32\KernelBase.dll
+C:\Windows\System32\OnDemandConnRouteHelper.dll
+C:\Windows\System32\OneCoreCommonProxyStub.dll
+C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+C:\Windows\System32\ResourcePolicyClient.dll
+C:\Windows\System32\RstrtMgr.dll
+C:\Windows\System32\SHCore.dll
+C:\Windows\System32\TaskFlowDataEngine.dll
+C:\Windows\System32\TextInputFramework.dll
+C:\Windows\System32\TextShaping.dll
+C:\Windows\System32\WinTypes.dll
+C:\Windows\System32\Windows.Globalization.dll
+C:\Windows\System32\Windows.Networking.Connectivity.dll
+C:\Windows\System32\Windows.Security.Authentication.OnlineId.dll
+C:\Windows\System32\Windows.Security.Authentication.Web.Core.dll
+C:\Windows\System32\Windows.StateRepositoryPS.dll
+C:\Windows\System32\Windows.Web.dll
+C:\Windows\System32\WindowsCodecs.dll
+C:\Windows\System32\aadWamExtension.dll
+C:\Windows\System32\advapi32.dll
+C:\Windows\System32\amsi.dll
+C:\Windows\System32\apphelp.dll
+C:\Windows\System32\bcrypt.dll
+C:\Windows\System32\bcryptprimitives.dll
+C:\Windows\System32\cdp.dll
+C:\Windows\System32\cfgmgr32.dll
+C:\Windows\System32\clbcatq.dll
+C:\Windows\System32\combase.dll
+C:\Windows\System32\coml2.dll
+C:\Windows\System32\crypt32.dll
+C:\Windows\System32\cryptbase.dll
+C:\Windows\System32\cryptnet.dll
+C:\Windows\System32\cryptsp.dll
+C:\Windows\System32\cryptui.dll
+C:\Windows\System32\cscapi.dll
+C:\Windows\System32\d2d1.dll
+C:\Windows\System32\d3d10_1.dll
+C:\Windows\System32\d3d10_1core.dll
+C:\Windows\System32\d3d10warp.dll
+C:\Windows\System32\d3d11.dll
+C:\Windows\System32\davhlpr.dll
+C:\Windows\System32\dcomp.dll
+C:\Windows\System32\dhcpcsvc.dll
+C:\Windows\System32\dhcpcsvc6.dll
+C:\Windows\System32\directmanipulation.dll
+C:\Windows\System32\dnsapi.dll
+C:\Windows\System32\dpapi.dll
+C:\Windows\System32\dsreg.dll
+C:\Windows\System32\dwmapi.dll
+C:\Windows\System32\dxgi.dll
+C:\Windows\System32\gdi32.dll
+C:\Windows\System32\gdi32full.dll
+C:\Windows\System32\globinputhost.dll
+C:\Windows\System32\iertutil.dll
+C:\Windows\System32\imm32.dll
+C:\Windows\System32\kernel.appcore.dll
+C:\Windows\System32\kernel32.dll
+C:\Windows\System32\linkinfo.dll
+C:\Windows\System32\mlang.dll
+C:\Windows\System32\msasn1.dll
+C:\Windows\System32\mscoree.dll
+C:\Windows\System32\msctf.dll
+C:\Windows\System32\msi.dll
+C:\Windows\System32\msimg32.dll
+C:\Windows\System32\mskeyprotect.dll
+C:\Windows\System32\mssprxy.dll
+C:\Windows\System32\msvcp110_win.dll
+C:\Windows\System32\msvcp_win.dll
+C:\Windows\System32\msvcrt.dll
+C:\Windows\System32\mswsock.dll
+C:\Windows\System32\msxml6.dll
+C:\Windows\System32\ncrypt.dll
+C:\Windows\System32\ncryptsslp.dll
+C:\Windows\System32\netapi32.dll
+C:\Windows\System32\netprofm.dll
+C:\Windows\System32\netutils.dll
+C:\Windows\System32\normaliz.dll
+C:\Windows\System32\npmproxy.dll
+C:\Windows\System32\nsi.dll
+C:\Windows\System32\ntasn1.dll
+C:\Windows\System32\ntdll.dll
+C:\Windows\System32\ntmarta.dll
+C:\Windows\System32\ntshrui.dll
+C:\Windows\System32\ole32.dll
+C:\Windows\System32\oleaut32.dll
+C:\Windows\System32\policymanager.dll
+C:\Windows\System32\powrprof.dll
+C:\Windows\System32\profapi.dll
+C:\Windows\System32\propsys.dll
+C:\Windows\System32\rasadhlp.dll
+C:\Windows\System32\rpcrt4.dll
+C:\Windows\System32\rsaenh.dll
+C:\Windows\System32\schannel.dll
+C:\Windows\System32\sechost.dll
+C:\Windows\System32\secur32.dll
+C:\Windows\System32\sfc.dll
+C:\Windows\System32\sfc_os.dll
+C:\Windows\System32\shell32.dll
+C:\Windows\System32\shlwapi.dll
+C:\Windows\System32\slc.dll
+C:\Windows\System32\sppc.dll
+C:\Windows\System32\srpapi.dll
+C:\Windows\System32\srvcli.dll
+C:\Windows\System32\sspicli.dll
+C:\Windows\System32\sxs.dll
+C:\Windows\System32\twinapi.appcore.dll
+C:\Windows\System32\twinapi.dll
+C:\Windows\System32\ucrtbase.dll
+C:\Windows\System32\umpdc.dll
+C:\Windows\System32\urlmon.dll
+C:\Windows\System32\user32.dll
+C:\Windows\System32\userenv.dll
+C:\Windows\System32\usermgrcli.dll
+C:\Windows\System32\usp10.dll
+C:\Windows\System32\uxtheme.dll
+C:\Windows\System32\vaultcli.dll
+C:\Windows\System32\version.dll
+C:\Windows\System32\vm3dum64_10.dll
+C:\Windows\System32\vm3dum64_loader.dll
+C:\Windows\System32\wbem\fastprox.dll
+C:\Windows\System32\wbem\wbemprox.dll
+C:\Windows\System32\wbem\wbemsvc.dll
+C:\Windows\System32\wbemcomn.dll
+C:\Windows\System32\webio.dll
+C:\Windows\System32\webservices.dll
+C:\Windows\System32\wevtapi.dll
+C:\Windows\System32\win32u.dll
+C:\Windows\System32\windows.storage.dll
+C:\Windows\System32\winhttp.dll
+C:\Windows\System32\wininet.dll
+C:\Windows\System32\winmm.dll
+C:\Windows\System32\winnsi.dll
+C:\Windows\System32\winsta.dll
+C:\Windows\System32\wintrust.dll
+C:\Windows\System32\wkscli.dll
+C:\Windows\System32\wldp.dll
+C:\Windows\System32\ws2_32.dll
+C:\Windows\System32\wsock32.dll
+C:\Windows\System32\wtsapi32.dll
+C:\Windows\System32\xmllite.dll
+C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_792d1c772443f647\comctl32.dll
+C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\comctl32.dll
+C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.1151_none_91a40286cc884949\GdiPlus.dll

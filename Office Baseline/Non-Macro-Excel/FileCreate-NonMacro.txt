@@ -1,0 +1,22 @@
+C:\Users\ADMINI~1\AppData\Local\Temp\Diagnostics\EXCEL\App_1630772995998649900_15A19CF0-173A-4081-B75C-39DF7B6EDCCA.log
+C:\Users\ADMINI~1\AppData\Local\Temp\Diagnostics\EXCEL\App_1630772995999414500_15A19CF0-173A-4081-B75C-39DF7B6EDCCA.log
+C:\Users\ADMINI~1\AppData\Local\Temp\Outlook Logging\EXCEL_16_0_14326_20238-20210904T1229570688-9488.etl
+C:\Users\ADMINI~1\AppData\Local\Temp\{15A19CF0-173A-4081-B75C-39DF7B6EDCCA} - OProcSessId.dat
+C:\Users\ADMINI~1\AppData\Local\Temp\{A8068E26-42B5-4329-AAE9-FF5A379CB33C}
+C:\Users\administrator\AppData\Local\Microsoft\Excel\CatalogCacheMetaData.xml
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Floodgate\Excel.CampaignStates.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Floodgate\Excel.GovernedChannelStates.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Floodgate\Excel.Settings.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Floodgate\Excel.SurveyEventActivityStats.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Floodgate\Excel.SurveyHistoryStats.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\MruServiceCache\95a5125fc6ee543c_LiveId\Excel\Documents_en-US
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\MruServiceCache\95a5125fc6ee543c_LiveId\Excel\Places_en-US
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Personalization\UserFacts\95a5125fc6ee543c_LiveId\Insights.json.tmp
+C:\Users\administrator\AppData\Local\Microsoft\Office\16.0\Wef\CustomFunctions\v1.7\hostproperties.json
+C:\Users\administrator\AppData\Local\Microsoft\Office\CLP\lareslabs.cloud.policy.xml
+C:\Users\administrator\AppData\Local\Microsoft\Office\OTele\excel.exe.db-shm
+C:\Users\administrator\AppData\Local\Microsoft\Office\OTele\excel.exe.db-wal
+C:\Users\administrator\AppData\Local\Microsoft\Outlook\~larescloud@lareslabs.cloud.ost.tmp
+C:\Users\administrator\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\mso634.tmp
+C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations\9RM6C0CGMSP1ZUDIF4T0.temp
+C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations\b8ab77100df80ab2.customDestinations-ms~RF882332.TMP
