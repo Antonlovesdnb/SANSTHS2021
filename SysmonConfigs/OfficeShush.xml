@@ -1,0 +1,536 @@
+<Sysmon schemaversion="4.70">
+<!-- SCPTAG: OfficeShush -->
+  <!-- Hashing algorithms that can be used are md5,sha1,sha256,imphash or * for all,
+  more than once can be specified separated by using comas -->
+  <HashAlgorithms>md5</HashAlgorithms>
+  <!-- Checking for signature revocation for drivers. -->
+  <CheckRevocation/>
+  <EventFiltering>
+    <RuleGroup name="Process Creation-Include" groupRelation="or">
+        <ProcessCreate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <ParentImage name="" condition="end with">WINWORD.EXE</ParentImage>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+          <ParentImage name="" condition="end with">EXCEL.EXE</ParentImage>
+        </ProcessCreate>
+    </RuleGroup>
+    <RuleGroup name="Process Creation-Exclude" groupRelation="or">
+        <ProcessCreate onmatch="exclude">
+        </ProcessCreate>
+    </RuleGroup>
+    <RuleGroup name="Network Connect-Include" groupRelation="or">
+        <NetworkConnect onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+        </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="Network Connect-Exclude" groupRelation="or">
+      <NetworkConnect onmatch="exclude">
+		<DestinationIp condition="is">104.47.35.22</DestinationIp>
+		<DestinationIp condition="is">104.47.61.16</DestinationIp>
+		<DestinationIp condition="is">13.69.116.104</DestinationIp>
+		<DestinationIp condition="is">23.2.5.249</DestinationIp>
+		<DestinationIp condition="is">52.109.6.11</DestinationIp>
+		<DestinationIp condition="is">52.109.8.62</DestinationIp>
+		<DestinationIp condition="is">52.109.8.71</DestinationIp>
+		<DestinationIp condition="is">52.111.227.4</DestinationIp>
+		<DestinationIp condition="is">52.96.191.146</DestinationIp>
+		<DestinationIp condition="is">52.96.215.34</DestinationIp>
+		<DestinationIp condition="is">104.208.16.90</DestinationIp>
+		<DestinationIp condition="is">52.109.20.75</DestinationIp>
+		<DestinationIp condition="is">52.109.6.26</DestinationIp>
+		<DestinationIp condition="is">52.109.8.20</DestinationIp>
+		<DestinationIp condition="is">52.96.88.226</DestinationIp>
+		<DestinationIp condition="is">52.96.88.242</DestinationIp>
+		<DestinationIp condition="is">52.109.16.5</DestinationIp>
+		<DestinationIp condition="is">52.182.143.208</DestinationIp>
+		<DestinationIp condition="is">104.47.43.26</DestinationIp>
+		<DestinationIp condition="is">52.109.6.25</DestinationIp>
+		<DestinationIp condition="is">104.47.43.26</DestinationIp>
+		<DestinationIp condition="is">104.47.47.26</DestinationIp>
+		<DestinationIp condition="is">52.111.227.6</DestinationIp>
+		<DestinationIp condition="is">52.109.16.49</DestinationIp>
+		<DestinationIp condition="is">52.111.227.6</DestinationIp>
+		<DestinationIp condition="is">52.109.8.50</DestinationIp>
+		<DestinationIp condition="is">104.123.192.28</DestinationIp>
+		<DestinationIp condition="is">40.101.128.194</DestinationIp>
+		<DestinationIp condition="is">104.47.60.16</DestinationIp>
+		<DestinationIp condition="is">52.96.215.82</DestinationIp>
+		<DestinationIp condition="is">52.111.227.3</DestinationIp>
+		<DestinationIp condition="is">52.96.215.50</DestinationIp>
+		<DestinationIp condition="is">52.96.50.130</DestinationIp>
+      </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="Image Load-Include" groupRelation="or">
+      <ImageLoad onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ImageLoad>
+	 </RuleGroup>
+	 <RuleGroup name="Image Load-Exclude" groupRelation="or">
+      <ImageLoad onmatch="exclude">
+		<ImageLoaded condition="is">C:\Program Files\Common Files\microsoft shared\ClickToRun\AppvIsvSubsystems64.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Common Files\microsoft shared\ClickToRun\C2R64.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\1033\MAPIR.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\CONTAB32.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\EMSMDB32.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\GFX.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\MSOARIA.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\MSPST32.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\OART.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\OLMAPI32.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\OutlookServicing.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\PROOF\msgrammar8.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\PROOF\msspell7.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\WWLIB.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\msproof7.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\msvcp140.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\react-native-win32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\v8jsi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\vcruntime140.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\vcruntime140_1.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\MSO.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\MSPTLS.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso20win32client.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso30win32client.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso40UIwin32client.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso50win32client.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\Mso98win32client.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\RICHED20.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\VBA\VBA7.1\VBE7.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\vfs\System\msvcr100.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2107.4-0\MpOAV.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\AppResolver.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\BCP47Langs.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\BCP47mrm.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\CertEnroll.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\CoreMessaging.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\CoreUIComponents.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\DWrite.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\DXCore.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\DataExchange.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\FWPUCLNT.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\FirewallAPI.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\HvsiManagementApi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\IPHLPAPI.DLL</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\KernelBase.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\MsSpellCheckingFacility.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\OnDemandConnRouteHelper.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\OneCoreCommonProxyStub.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\OneCoreUAPCommonProxyStub.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ResourcePolicyClient.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\RstrtMgr.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\SHCore.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\TaskFlowDataEngine.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\TextInputFramework.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\TextShaping.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\UIAutomationCore.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\WinTypes.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.FileExplorer.Common.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Globalization.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Networking.Connectivity.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Networking.HostName.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Networking.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Security.Authentication.OnlineId.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Security.Authentication.Web.Core.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.StateRepositoryPS.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Windows.Web.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\WindowsCodecs.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\Wldap32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\aadWamExtension.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\advapi32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\amsi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\apphelp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\bcrypt.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\bcryptprimitives.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\biwinrt.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cdp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\certca.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cfgmgr32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\clbcatq.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\combase.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\coml2.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\crypt32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cryptbase.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cryptnet.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cryptsp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cryptui.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\cscapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\d2d1.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\d3d11.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\davhlpr.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dcomp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dhcpcsvc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dhcpcsvc6.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dnsapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dpapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dsparse.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dsreg.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dwmapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\dxgi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\edputil.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\fltLib.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\fwbase.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\gdi32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\gdi32full.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\globinputhost.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\iertutil.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\imm32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\kernel.appcore.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\kernel32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\linkinfo.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mlang.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msasn1.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mscoree.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msctf.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msimg32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mskeyprotect.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mssprxy.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msvcp110_win.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msvcp_win.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msvcrt.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mswsock.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\msxml6.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ncrypt.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ncryptsslp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\netapi32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\netprofm.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\netutils.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\normaliz.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\npmproxy.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\nsi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ntasn1.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ntdll.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ntmarta.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ntshrui.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ole32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\oleaut32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\policymanager.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\powrprof.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\profapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\propsys.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\rasadhlp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\rpcrt4.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\rsaenh.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\schannel.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sechost.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\secur32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sfc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sfc_os.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\shell32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\shlwapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\slc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sppc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\srpapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\srvcli.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sspicli.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\sxs.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\twinapi.appcore.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\twinapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ucrtbase.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\umpdc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\urlmon.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\user32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\userenv.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\usermgrcli.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\usp10.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\uxtheme.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\vaultcli.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\version.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\virtdisk.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\vm3dum64_10.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\vm3dum64_loader.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wbem\fastprox.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wbem\wbemprox.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wbem\wbemsvc.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wbemcomn.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\webio.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\webservices.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wevtapi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\win32u.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\windows.storage.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\winhttp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wininet.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\winmm.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\winnsi.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\winsta.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wintrust.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wkscli.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wldp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ws2_32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wsock32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\wtsapi32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\xmllite.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\comctl32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.1151_none_91a40286cc884949\GdiPlus.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\MicrosoftAccountWAMExtension.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\d3d10warp.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Program Files\Microsoft Office\root\Office16\Microsoft.Office.PolicyTips.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\d3d10_1.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\d3d10_1core.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\directmanipulation.dll</ImageLoaded>
+		<ImageLoaded condition="end with">comctl32.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\ExplorerFrame.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\mpr.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2107.4-0\MpClient.dll</ImageLoaded>
+		<ImageLoaded condition="is">C:\Windows\System32\gpapi.dll</ImageLoaded>
+      </ImageLoad>
+    </RuleGroup>
+    <RuleGroup name="CreateRemoteThread-Include" groupRelation="or">
+      <CreateRemoteThread onmatch="include">
+          <SourceImage name="" condition="end with">WINWORD.EXE</SourceImage>
+          <SourceImage name="" condition="end with">EXCEL.EXE</SourceImage>
+      </CreateRemoteThread>
+	 </RuleGroup>
+	 <RuleGroup name="CreateRemoteThread-Exclude" groupRelation="or">
+      <CreateRemoteThread onmatch="exclude">
+        
+      </CreateRemoteThread>
+    </RuleGroup>
+    <RuleGroup name="ProcessAccess-Include" groupRelation="or">
+		<ProcessAccess onmatch="include">
+			 <SourceImage name="" condition="end with">WINWORD.EXE</SourceImage>
+			 <SourceImage name="" condition="end with">EXCEL.EXE</SourceImage>
+		 </ProcessAccess>
+	 </RuleGroup>
+	 <RuleGroup name="ProcessAccess-Exclude" groupRelation="or">
+      <ProcessAccess onmatch="exclude">
+		<TargetImage condition="is">C:\Windows\Explorer.EXE</TargetImage>
+		<TargetImage condition="is">C:\Windows\system32\mmc.exe</TargetImage>
+		<GrantedAccess condition="is">0x1400</GrantedAccess>
+		<GrantedAccess condition="is">0x100001</GrantedAccess>
+      </ProcessAccess>
+    </RuleGroup>
+    <RuleGroup name="File Create - Include" groupRelation="or">
+      <FileCreate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="File Create - Exclude" groupRelation="or">
+      <FileCreate onmatch="exclude">
+        <TargetFilename condition="end with">App_1630766339047996300_916E0F46-AFA1-483D-8BA0-4E694377EF46.log</TargetFilename>
+		<TargetFilename condition="end with">App_1630766339048664700_916E0F46-AFA1-483D-8BA0-4E694377EF46.log</TargetFilename>
+		<TargetFilename condition="end with">WINWORD_16_0_14326_20238-20210904T1038590939-2884.etl</TargetFilename>
+		<TargetFilename condition="end with">OProcSessId.dat</TargetFilename>
+		<TargetFilename condition="end with">{BF6BFD49-99FE-4D09-90A6-A14B562AD44C}</TargetFilename>
+		<TargetFilename condition="end with">Word.CampaignStates.json</TargetFilename>
+		<TargetFilename condition="end with">Word.GovernedChannelStates.json</TargetFilename>
+		<TargetFilename condition="end with">Word.Settings.json</TargetFilename>
+		<TargetFilename condition="end with">Word.SurveyEventActivityStats.json</TargetFilename>
+		<TargetFilename condition="end with">Word.SurveyHistoryStats.json</TargetFilename>
+		<TargetFilename condition="end with">Documents_en-US</TargetFilename>
+		<TargetFilename condition="end with">Places_en-US</TargetFilename>
+		<TargetFilename condition="end with">lareslabs.cloud.policy.xml</TargetFilename>
+		<TargetFilename condition="end with">winword.exe.db-shm</TargetFilename>
+		<TargetFilename condition="end with">winword.exe.db-wal</TargetFilename>
+		<TargetFilename condition="end with">cloud.ost.tmp</TargetFilename>
+		<TargetFilename condition="end with">~WRF{A6A53805-AB56-4B2E-B8C2-751870BA77E6}.tmp</TargetFilename>
+		<TargetFilename condition="end with">~WRS{735BA464-7ED6-4C1A-9A89-073184F979E6}.tmp</TargetFilename>
+		<TargetFilename condition="end with">CB99Y2W50IJ2Z305RX91.temp</TargetFilename>
+		<TargetFilename condition="end with">fb3b0dbfee58fac8.customDestinations-ms~RF228d56.TMP</TargetFilename>
+		<TargetFilename condition="end with">.etl</TargetFilename>
+		<TargetFilename condition="end with">.tbres</TargetFilename>
+		<TargetFilename condition="contains">Diagnostics\WINWORD</TargetFilename>
+		<TargetFilename condition="contains">Windows\Recent\CustomDestinations\</TargetFilename>
+		<TargetFilename condition="contains">Temp\{</TargetFilename>
+		<TargetFilename condition="contains">INetCache\Content.Word</TargetFilename>
+		<TargetFilename condition="contains">Personalization\UserFacts</TargetFilename>
+		<TargetFilename condition="contains">Microsoft\Office\16.0\DTS</TargetFilename>
+		<TargetFilename condition="contains">Wef\CustomFunctions</TargetFilename>
+		<TargetFilename condition="contains">Office\OTele</TargetFilename>
+		<TargetFilename condition="contains">Excel\CatalogCacheMetaData.xml</TargetFilename>
+		<TargetFilename condition="contains">Windows\INetCache\Content.MSO</TargetFilename>
+		<TargetFilename condition="contains">Excel\CatalogCacheMetaData.xml</TargetFilename>
+		<TargetFilename condition="contains">Floodgate\Excel</TargetFilename>
+		<TargetFilename condition="contains">Diagnostics\EXCEL</TargetFilename>
+		<TargetFilename condition="contains">Personalization\Governance</TargetFilename>
+		<TargetFilename condition="contains">UsageMetricsStore\FileActivityStore</TargetFilename>
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="Process Terminate - Include" groupRelation="or">
+      <ProcessTerminate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ProcessTerminate>
+    </RuleGroup>
+    <RuleGroup name="Process Terminate - Exclude" groupRelation="or">
+      <ProcessTerminate onmatch="exclude">
+        
+      </ProcessTerminate>
+    </RuleGroup>
+    <RuleGroup name="RegKey-Include" groupRelation="or">
+      <RegistryEvent onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="RegKey-Exclude" groupRelation="or">
+      <RegistryEvent onmatch="exclude">
+        <TargetObject condition="is">HKLM\SOFTWARE</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\Common</TargetObject>
+		<TargetObject condition="is">HKLM\System\CurrentControlSet\Control\Hvsi</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{A1B69D49-2195-4F59-9D33-BDF30C0FE473}</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{BB00E856-A12F-4AB7-B2C8-4E80CAEA5B07}</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{DAF0B914-9C1C-450A-81B2-FEA7244F6FFA}</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\DocumentTemplateCache</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\Settings\1065\{00000000-0000-0000-0000-000000000000}\PendingChanges</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\' `</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\4~`</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\; `</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\CrashPersistence\WINWORD\2884</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\CrashPersistence\WINWORD\2884\0</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\WINWORD\2884</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\WINWORD\7584</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\WINWORD\7584\0</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109A10090400100000000F01FEC\Usage\OutlookMAPI2Intl_1033</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F00000000100000000F01FEC\Usage\ProductFiles</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F00000000100000000F01FEC\Usage\VBAFiles</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F10090400100000000F01FEC\Usage\SpellingAndGrammarFiles_1033</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F100A0C00100000000F01FEC\Usage\SpellingAndGrammarFiles_3082</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\00006109F100C0400100000000F01FEC\Usage\SpellingAndGrammarFiles_1036</TargetObject>
+		<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data\418A073AA3BC3475</TargetObject>
+		<TargetObject condition="is">HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-1782144875-2244134600-1088407481-500\\Device\HarddiskVolume3\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\4</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\Categories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{A1B69D49-2195-4F59-9D33-BDF30C0FE473}\2</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{A1B69D49-2195-4F59-9D33-BDF30C0FE473}\Categories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{BB00E856-A12F-4AB7-B2C8-4E80CAEA5B07}\5</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{BB00E856-A12F-4AB7-B2C8-4E80CAEA5B07}\Categories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{DAF0B914-9C1C-450A-81B2-FEA7244F6FFA}\5</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{DAF0B914-9C1C-450A-81B2-FEA7244F6FFA}\Categories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\4</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ETWMonitor\{F562BB8E-422D-4B5C-B20E-90D710F7D11C}\Categories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSAllCategories</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSCategoriesSeverities</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSTagIds0</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry\RulesMetadata\winword.exe\ULSMonitor\ULSTagIds1</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\LanguageResources\EnabledEditingLanguages\en-US</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\LastWrite</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\Settings\1065\{00000000-0000-0000-0000-000000000000}\Knowledge</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\Identities\95a5125fc6ee543c_LiveId\Settings\1065\{00000000-0000-0000-0000-000000000000}\Placeholder</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastSyncTimeWord</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Roaming\RoamingLastWriteTimeWord</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\SessionId</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Common\Toolbars\Settings\Microsoft Word</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Logging\(Default)</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\00036604</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook\c2dfd4b9b0914740ae6fef2d579e9a59\01023e01</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Outlook\Search\Catalog\C:\Users\administrator\AppData\Local\Microsoft\Outlook\larescloud@lareslabs.cloud.ost</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Data\Settings</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\DocumentTemplateCache\en-US{6C9A153E-469A-4C60-AC61-6DD1F79D06AD}\UpdateInProgress</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\' `</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\4~`</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\16.0\Word\Resiliency\StartupItems\; `</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\ClientTelemetry\Sampling\0</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\CrashPersistence\WINWORD\2884\0</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Office\Common\GracefulExit\WINWORD\2884\0</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.doc\OpenWithProgids\Word.Document.8</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Content\CachePrefix</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\Cookies\CachePrefix</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache\History\CachePrefix</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass</TargetObject>
+		<TargetObject condition="is">HKU\S-1-5-21-1782144875-2244134600-1088407481-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet</TargetObject>
+		<TargetObject condition="contains">Common\AutoProvisioning</TargetObject>
+		<TargetObject condition="contains">Common\ClientTelemetry\RulesLastModified</TargetObject>
+		<TargetObject condition="contains">Common\ClientTelemetry\RulesLastModified</TargetObject>
+		<TargetObject condition="contains">Common\Internet\WebServiceCache\</TargetObject>
+		<TargetObject condition="contains">Common\Responsiveness\Word</TargetObject>
+		<TargetObject condition="contains">Microsoft\Office\16.0\Common\Tap\</TargetObject>
+		<TargetObject condition="contains">Word\Options\AppWindowPos</TargetObject>
+		<TargetObject condition="contains">Resiliency\StartupItems</TargetObject>
+		<TargetObject condition="contains">Word\Resiliency\StartupItems</TargetObject>
+		<TargetObject condition="contains">Office\16.0\Word\Resiliency</TargetObject>
+		<TargetObject condition="contains">Office\Common\CrashPersistence</TargetObject>
+		<TargetObject condition="contains">Office\Common\GracefulExit</TargetObject>
+		<TargetObject condition="contains">Word\DocumentTemplateCache</TargetObject>
+		<TargetObject condition="contains">Common\ClientTelemetry\RulesMetadata</TargetObject>
+		<TargetObject condition="contains">Excel\Resiliency</TargetObject>
+		<TargetObject condition="contains">Excel\ExcelWorkbookOpenedCount</TargetObject>
+		<TargetObject condition="contains">Excel\ExcelPreviousSessionId</TargetObject>
+		<TargetObject condition="contains">Excel\ImmersiveWorkbookDirtySentinel</TargetObject>
+		<TargetObject condition="end with">Microsoft Office\root\Office16\EXCEL.EXE</TargetObject>
+		<TargetObject condition="contains">Microsoft\Office\Common\ClientTelemetry</TargetObject>
+		<TargetObject condition="contains">Excel\DocumentTemplateCache</TargetObject>
+		<TargetObject condition="contains">Common\Roaming\RoamingLastWriteTimeExcel</TargetObject>
+		<TargetObject condition="contains">Common\Roaming\RoamingLastSyncTimeExcel</TargetObject>
+		<TargetObject condition="contains">Excel\ImmersiveWorkbookDirtySentinel</TargetObject>
+		<TargetObject condition="contains">Excel\ExcelWorkbookOpenedCount</TargetObject>
+		<TargetObject condition="contains">Excel\DocumentTemplateCache</TargetObject>
+		<TargetObject condition="contains">Microsoft\Windows\CurrentVersion\Explorer\FileExts</TargetObject>
+		<TargetObject condition="contains">Excel\User MRU\</TargetObject>
+		<TargetObject condition="contains">ExcelWorkbookAutoRecoverDirty</TargetObject>
+		<TargetObject condition="contains">CurrentVersion\AppContainer\Mappings</TargetObject>
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="PipeEvent-Include" groupRelation="or">
+      <PipeEvent onmatch="include">
+        
+      </PipeEvent>
+    </RuleGroup>
+    <RuleGroup name="PipeEvent-Exclude" groupRelation="or">
+      <PipeEvent onmatch="exclude">
+        
+      </PipeEvent>
+    </RuleGroup>
+    <RuleGroup name="WMIEvent-Include" groupRelation="or">
+      <WmiEvent onmatch="include">
+      </WmiEvent>
+    </RuleGroup>
+    <RuleGroup name="WMIEvent-Exclude" groupRelation="or">
+      <WmiEvent onmatch="exclude">
+      </WmiEvent>
+    </RuleGroup>
+    <RuleGroup name="DNSEvent-Include" groupRelation="or">
+      <DnsQuery onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </DnsQuery>
+    </RuleGroup>
+    <RuleGroup name="DNSEvent-Exclude" groupRelation="or">
+      <DnsQuery onmatch="exclude">
+        <QueryName condition="is">augloop.office.com</QueryName>
+		<QueryName condition="is">can01.dataservice.protection.outlook.com</QueryName>
+		<QueryName condition="is">dataservice.protection.outlook.com</QueryName>
+		<QueryName condition="is">nleditor.osi.office.net</QueryName>
+		<QueryName condition="is">ocws.officeapps.live.com</QueryName>
+		<QueryName condition="is">outlook.office365.com</QueryName>
+		<QueryName condition="is">roaming.officeapps.live.com</QueryName>
+		<QueryName condition="is">self.events.data.microsoft.com</QueryName>
+		<QueryName condition="is">substrate.office.com</QueryName>
+		<QueryName condition="is">uci.cdn.office.net</QueryName>
+		<QueryName condition="is">nexusrules.officeapps.live.com</QueryName>
+		<QueryName condition="is">officeclient.microsoft.com</QueryName>
+		<QueryName condition="is">outlook.office.com</QueryName>
+		<QueryName condition="is">binaries.templates.cdn.office.net</QueryName>
+		<QueryName condition="is">messaging.office.com</QueryName>
+		<QueryName condition="is">support.content.office.net</QueryName>
+      </DnsQuery>
+    </RuleGroup>
+    <RuleGroup name="ProcessTampering-Include" groupRelation="or">
+      <ProcessTampering onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ProcessTampering>
+    </RuleGroup>
+    <RuleGroup name="ProcessTampering-Exclude" groupRelation="or">
+      <ProcessTampering onmatch="exclude">
+      </ProcessTampering>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>

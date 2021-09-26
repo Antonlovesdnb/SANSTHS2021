@@ -1,0 +1,139 @@
+<Sysmon schemaversion="4.70">
+<!-- SCPTAG: OfficeWatch -->
+  <!-- Hashing algorithms that can be used are md5,sha1,sha256,imphash or * for all,
+  more than once can be specified separated by using comas -->
+  <HashAlgorithms>md5</HashAlgorithms>
+  <!-- Checking for signature revocation for drivers. -->
+  <CheckRevocation/>
+  <EventFiltering>
+    <RuleGroup name="Process Creation-Include" groupRelation="or">
+        <ProcessCreate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <ParentImage name="" condition="end with">WINWORD.EXE</ParentImage>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+          <ParentImage name="" condition="end with">EXCEL.EXE</ParentImage>
+        </ProcessCreate>
+    </RuleGroup>
+    <RuleGroup name="Process Creation-Exclude" groupRelation="or">
+        <ProcessCreate onmatch="exclude">
+        </ProcessCreate>
+    </RuleGroup>
+    <RuleGroup name="Network Connect-Include" groupRelation="or">
+        <NetworkConnect onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+        </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="Network Connect-Exclude" groupRelation="or">
+      <NetworkConnect onmatch="exclude">
+      </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="Image Load-Include" groupRelation="or">
+      <ImageLoad onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ImageLoad>
+	 </RuleGroup>
+	 <RuleGroup name="Image Load-Exclude" groupRelation="or">
+      <ImageLoad onmatch="exclude">
+      </ImageLoad>
+    </RuleGroup>
+    <RuleGroup name="CreateRemoteThread-Include" groupRelation="or">
+      <CreateRemoteThread onmatch="include">
+          <SourceImage name="" condition="end with">WINWORD.EXE</SourceImage>
+          <SourceImage name="" condition="end with">EXCEL.EXE</SourceImage>
+      </CreateRemoteThread>
+	 </RuleGroup>
+	 <RuleGroup name="CreateRemoteThread-Exclude" groupRelation="or">
+      <CreateRemoteThread onmatch="exclude">
+        
+      </CreateRemoteThread>
+    </RuleGroup>
+    <RuleGroup name="ProcessAccess-Include" groupRelation="or">
+		<ProcessAccess onmatch="include">
+			 <SourceImage name="" condition="end with">WINWORD.EXE</SourceImage>
+			 <SourceImage name="" condition="end with">EXCEL.EXE</SourceImage>
+		 </ProcessAccess>
+	 </RuleGroup>
+	 <RuleGroup name="ProcessAccess-Exclude" groupRelation="or">
+      <ProcessAccess onmatch="exclude">
+        
+      </ProcessAccess>
+    </RuleGroup>
+    <RuleGroup name="File Create - Include" groupRelation="or">
+      <FileCreate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="File Create - Exclude" groupRelation="or">
+      <FileCreate onmatch="exclude">
+        
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="Process Terminate - Include" groupRelation="or">
+      <ProcessTerminate onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ProcessTerminate>
+    </RuleGroup>
+    <RuleGroup name="Process Terminate - Exclude" groupRelation="or">
+      <ProcessTerminate onmatch="exclude">
+        
+      </ProcessTerminate>
+    </RuleGroup>
+    <RuleGroup name="RegKey-Include" groupRelation="or">
+      <RegistryEvent onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="RegKey-Exclude" groupRelation="or">
+      <RegistryEvent onmatch="exclude">
+        
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="PipeEvent-Include" groupRelation="or">
+      <PipeEvent onmatch="include">
+        
+      </PipeEvent>
+    </RuleGroup>
+    <RuleGroup name="PipeEvent-Exclude" groupRelation="or">
+      <PipeEvent onmatch="exclude">
+        
+      </PipeEvent>
+    </RuleGroup>
+    <RuleGroup name="WMIEvent-Include" groupRelation="or">
+      <WmiEvent onmatch="include">
+        
+      </WmiEvent>
+    </RuleGroup>
+    <RuleGroup name="WMIEvent-Exclude" groupRelation="or">
+      <WmiEvent onmatch="exclude">
+        
+      </WmiEvent>
+    </RuleGroup>
+    <RuleGroup name="DNSEvent-Include" groupRelation="or">
+      <DnsQuery onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </DnsQuery>
+    </RuleGroup>
+    <RuleGroup name="DNSEvent-Exclude" groupRelation="or">
+      <DnsQuery onmatch="exclude">
+        
+      </DnsQuery>
+    </RuleGroup>
+    <RuleGroup name="ProcessTampering-Include" groupRelation="or">
+      <ProcessTampering onmatch="include">
+          <Image name="" condition="end with">WINWORD.EXE</Image>
+          <Image name="" condition="end with">EXCEL.EXE</Image>
+      </ProcessTampering>
+    </RuleGroup>
+    <RuleGroup name="ProcessTampering-Exclude" groupRelation="or">
+      <ProcessTampering onmatch="exclude">
+        
+      </ProcessTampering>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
