@@ -8,10 +8,12 @@
   <EventFiltering>
     <RuleGroup name="Process Creation-Include" groupRelation="or">
         <ProcessCreate onmatch="include">
-		  <Image name="" condition="end with">WINWORD.EXE</Image>
-          <ParentImage name="" condition="end with">WINWORD.EXE</ParentImage>
-          <Image name="" condition="end with">EXCEL.EXE</Image>
-          <ParentImage name="" condition="end with">EXCEL.EXE</ParentImage>
+			<Image condition="is">C:\Windows\system32\wbem\wmiprvse.exe</Image>
+			<ParentImage condition="is">C:\Windows\system32\wbem\wmiprvse.exe</ParentImage>
+			<Image name="" condition="end with">WINWORD.EXE</Image>
+			<ParentImage name="" condition="end with">WINWORD.EXE</ParentImage>
+			<Image name="" condition="end with">EXCEL.EXE</Image>
+			<ParentImage name="" condition="end with">EXCEL.EXE</ParentImage>
         </ProcessCreate>
     </RuleGroup>
     <RuleGroup name="Process Creation-Exclude" groupRelation="or">
@@ -30,6 +32,46 @@
       <ImageLoad onmatch="include">
 		<ImageLoaded condition="contains">VBE7INTL.DLL</ImageLoaded>
 		<ImageLoaded condition="contains">VBEUI.DLL</ImageLoaded>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\SysWOW64\combase.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\SysWOW64\coml2.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\SysWOW64\comsvcs.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\System32\wbem\wbemprox.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\System32\wbemcomn.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\System32\wbem\wbemsvc.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="is">C:\Windows\System32\wbem\wbemdisp.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="end with">clr.dll</ImageLoaded>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="begin with">C:\Windows\assembly</ImageLoaded>
+		</Rule>	
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<ImageLoaded condition="end with">clrjit.dll</ImageLoaded>
+		</Rule>			
       </ImageLoad>
 	 </RuleGroup>
 	 <RuleGroup name="Image Load-Exclude" groupRelation="or">
@@ -50,6 +92,8 @@
 				<SourceImage condition="contains">Microsoft Office</SourceImage>
 				<GrantedAccess condition="is">0x1FFFFF</GrantedAccess>
 			</Rule>
+			<CallTrace condition="contains" name="technique_id=T1047,technique_name=Windows Management Instrumentation,function_name=ProviderExecMethod">C:\Windows\SYSTEM32\framedynos.dll+22306</CallTrace>
+			<CallTrace condition="contains" name="technique_id=T1047,technique_name=Windows Management Instrumentation,function_name=CWbemProviderGlueExecMethodAsync">C:\Windows\SYSTEM32\framedynos.dll+239ae</CallTrace>
 		 </ProcessAccess>
 	 </RuleGroup>
 	 <RuleGroup name="ProcessAccess-Exclude" groupRelation="or">
@@ -58,6 +102,14 @@
     </RuleGroup>
     <RuleGroup name="File Create - Include" groupRelation="or">
       <FileCreate onmatch="include">
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<TargetFilename condition="end with">.jse</TargetFilename>
+		</Rule>
+		<Rule groupRelation="and" name="">
+			<Image condition="contains">root\Office16\</Image>
+			<TargetFilename condition="end with">.vbs</TargetFilename>
+		</Rule>
       </FileCreate>
     </RuleGroup>
     <RuleGroup name="File Create - Exclude" groupRelation="or">
