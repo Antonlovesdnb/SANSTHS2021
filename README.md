@@ -1,6 +1,4 @@
-# SANS Threat Hunting Summit 2021
-
-## Hunting Malicious Macros SANS Threathunting Summit 2021 Materials
+# Hunting Malicious Macros SANS Threathunting Summit 2021 Materials
 
 This repo contains all materials from the Hunting Malicious Office Macros Presentation 
 
