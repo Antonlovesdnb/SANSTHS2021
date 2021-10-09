@@ -1,0 +1,25 @@
+index=sysmon
+| bin _time span=1m
+| eval ProcessGuid=coalesce(ProcessGuid,SourceProcessGUID)
+| eval qualifiers=if(match(ParentImage,"OUTLOOK.EXE"), mvappend(qualifiers,"Outlook as Parent # score: 2"),qualifiers)
+| eval qualifiers=if(match(ImageLoaded,"VBE"),mvappend(qualifiers,"VBE DLL Loaded # score: 3"),qualifiers)
+| eval qualifiers=if(match(ImageLoaded,"combase.dll"),mvappend(qualifiers,"COM DLL Loaded # score: 4"),qualifiers)
+| eval qualifiers=if(match(TargetObject,"Trusted Documents"),mvappend(qualifiers,"Trust Record Modification # score: 3"),qualifiers)
+| eval qualifiers=if(match(CommandLine,"MyFileShare"),mvappend(qualifiers,"File Opened From Trusted Source # score: -3"),qualifiers)
+| eval qualifiers=if(match(GrantedAccess,"0x1fffff"),mvappend(qualifiers,"RWX Granted Access in CallTrace # score: 2"),qualifiers)
+| eval qualifiers=if(match(Image,"powershell"),mvappend(qualifiers,"PowerShell spawned from Office Product # score: 10"),qualifiers)
+| eval qualifiers=if(match(Image,"cmd"),mvappend(qualifiers,"Command Prompt spawned from Office Product # score: 10"),qualifiers)
+| eval qualifiers=if(match(CommandLine,"\/c"),mvappend(qualifiers,"Command Prompt with suspicious parameters spawned from Office Product # score: 15"),qualifiers)
+| eval qualifiers=if(match(Image,"cscript.exe"),mvappend(qualifiers,"Cscript spawned from Office Product # score: 10"),qualifiers)
+| eval qualifiers=if(match(TargetFilename,"\.jse"),mvappend(qualifiers,"Suspicious JSE File Created # score: 10"),qualifiers)
+| eval qualifiers=if(match(TargetFilename,"\.vbs"),mvappend(qualifiers,"Suspicious VBS File Created # score: 10"),qualifiers)
+| eval qualifiers=if(match(RuleName,"ProviderExecMethod"),mvappend(qualifiers,"Suspicious WMI Function # score: 10"),qualifiers)
+| eval qualifiers=if(match(Description,"WMI"),mvappend(qualifiers,"Suspicious WMI ImageLoad # score: 10"),qualifiers)
+| eval qualifiers=if(match(ImageLoaded,"clr.dll"),mvappend(qualifiers,"DotNet Office Load # score: 10"),qualifiers)
+| eval qualifiers=if(match(ImageLoaded,"assembly"),mvappend(qualifiers,"DotNet Native Image Office Load # score: 10"),qualifiers)
+| eval qualifiers=if(match(TargetImage,"powershell"),mvappend(qualifiers,"Suspicious TargetImage (PowerShell) # score: 10"),qualifiers)
+| eval qualifiers=if(match(TargetImage,"cmd"),mvappend(qualifiers,"Suspicious TargetImage (CMD) # score: 10"),qualifiers)
+| rex field=qualifiers "(?<=score: )(?<score>(.*)(?=))"
+| eventstats sum(score) as score_total by host,_time
+| search qualifiers=*
+| stats values(qualifiers),values(score_total) BY host,_time
